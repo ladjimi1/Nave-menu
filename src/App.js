@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
+import Menu from './Menu'
 import './App.css';
+
+const menuItems = [
+  {
+    title: 'Home',
+    link: '#',
+    active: true
+  },
+  {
+    title: 'Services',
+    link: '#',
+    active: false,
+    subMenu: ['For entrepreuneurs', 'For students', 'For Hobbysist']
+  },
+  {
+    title: 'Contact',
+    link: '#',
+    active: false
+  },
+]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Nav-menu">
+      <Menu items={menuItems}/>
     </div>
   );
 }
